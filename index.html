@@ -8,39 +8,18 @@
     <title>Document</title>
 </head>
 <body>
-
-<button class="button" id="backward" ></button>
-<button class="button" id="forward" ></button>
-<button class="button" id="play"></button>
-<button class="button" hidden id="pause"></button>
-<button>avanzar 10 segundos</button>
-
-<video id="video" poster="./images/poster.jpg" controls muted src="./videos/lofi.mp4" width="400px"></video>
-
-<script>
-    const $video = document.querySelector('#video');
-    const $play = document.querySelector('#play');
-    const $pause = document.querySelector('#pause');
-
-    $play.addEventListener('click',handlePlay);
-    $pause.addEventListener('click',handlePause);
-
-    function handlePlay() {
-        $video.play()
-        $play.hidden = true;
-        $pause.hidden = false
-
-        console.log('le estas dando click al botons');
-    }
-
-    function handlePause() {
-        $video.pause()
-        $pause.hidden = true;
-        $play.hidden= false;
-        console.log('le estas dando click al botons');
-    }
-
-</script>
+    <div class="wrapper">
+        <div class="player">
+            
+            <button class="button" id="backward"  aria-label="retroceder 10 segundos" title="retroceder 10 segundos"></button>
+            <button class="button" id="play" aria-label="reproducir" title="reproducir"></button>
+            <button class="button" hidden id="pause"aria-label="pausa" title="pausar"></button>
+            <button class="button" id="forward" aria-label="adelantar 10 segundos" title="adelantasr 10 segundos"></button>
+            <video id="video" poster="./images/poster.jpg" controls muted src="./videos/lofi.mp4" width="400px"></video>
+            
+        </div>
+    </div>
+<script src="./js/index.js"> </script>
 
 </body>
 </html>
